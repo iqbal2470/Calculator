@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             Shell.NavBarIsVisible="False"
+             >
+    <Grid RowDefinitions="5*,1*,1*,1*,1*,1*,0*" MaximumWidthRequest="400"  HeightRequest="700">
+        <Label Grid.Row="0" x:Name="Calculator" FontSize="60" HorizontalTextAlignment="End" VerticalTextAlignment="Center" WidthRequest="340" HeightRequest="250" />
+        <Line Grid.Row="1" BackgroundColor="LightGray" HeightRequest="0.1"/>
+        <Grid Grid.Row="1" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400" HeightRequest="0" Padding="30">
+            <Button Grid.Column="0" Text="MC" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_7"/>
+            <Button Grid.Column="2" Text="M+" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_8"/>
+            <Button Grid.Column="4" Text="M-" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_9"/>
+            <Button Grid.Column="6" Text="MR" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_10"/>
+        </Grid>
+        <Grid Grid.Row="2" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400" HeightRequest="0" Padding="30">
+            <Button Grid.Column="0" Text="AC"  WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_4"/>
+            <Button Grid.Column="2" Text="C"   WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_3" />
+            <Button Grid.Column="4" Text="+/-" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_6"/>
+            <Button Grid.Column="6" Text="/"   WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_2"/>
+        </Grid>
+        <Grid Grid.Row="3" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400" HeightRequest="0" Padding="30">
+            <Button Grid.Column="0" Text="7" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="2" Text="8" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="4" Text="9" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="6" Text="x" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_2"/>
+        </Grid>
+        <Grid Grid.Row="4" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400" HeightRequest="3" Padding="30">
+            <Button Grid.Column="0" Text="4" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="2" Text="5" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="4" Text="6" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="6" Text="-" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_2"/>
+        </Grid>
+        <Grid Grid.Row="5" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400" HeightRequest="33" Padding="30">
+            <Button Grid.Column="0" Text="1" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="2" Text="2" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="4" Text="3" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="6" Text="+" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnEqual}" Clicked="Button_Clicked_2"/>
+        </Grid>
+        <Grid Grid.Row="6" ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*" MaximumWidthRequest="400"   HeightRequest="60" Padding="30" >
+            <Button Grid.Column="0" Text="%" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_2"/>
+            <Button Grid.Column="2" Text="0" WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_1"/>
+            <Button Grid.Column="4" Text="." WidthRequest="70" HeightRequest="50" FontSize="25" TextColor="{StaticResource BtnC}" Clicked="Button_Clicked_5"/>
+            <Button Grid.Column="6" Text="=" WidthRequest="55" HeightRequest="55" FontSize="25" TextColor="{StaticResource Primary}" BackgroundColor="{StaticResource BtnEqual}" CornerRadius="50" Clicked="Button_Clicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>
